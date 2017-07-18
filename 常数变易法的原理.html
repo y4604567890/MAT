@@ -1,0 +1,1235 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>  
+        <script type="text/javascript" src="http://static.blog.csdn.net/scripts/tingyun-rum.js"></script>
+            <link rel="canonical" href="http://blog.csdn.net/agul_/article/details/8561077"/> 
+ <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848"> 
+       
+    <title>常数变易法的原理解释 - Present
+        - CSDN博客</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="高数看到常数变易法，不懂为什么要把C变成u，看了篇文章，感觉懂了 转载自http://www.cnblogs.com/lookof/archive/2009/01/06/1370065.html注： 本方法是对崔士襄教授写的《“常数变易法”来历的探讨》论文的解释。思路并非本人原创。特此注明。背景详见本人前一篇博文。&#160;&#160;&#160; &#160; &#160; &#160; 我们来看下面的式子：" />
+
+    <meta name="keywords" content="" />
+
+   
+    <script src="http://static.blog.csdn.net/scripts/blog_static_head.min.js" type="text/javascript"></script>
+
+    
+        <!--new top-->
+                      <!--new top-->
+    
+      <!-- ad begin -->
+         
+    <!-- ad end-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/light_blue/css/style.css?v=1.1" />
+
+    
+
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/Agul_/rss/list" />
+    <link rel="shortcut icon" href="http://c.csdnimg.cn/public/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+ 
+
+
+
+    <link href="http://c.csdnimg.cn/blog/csdn_public_blog_detail.min.css" type="text/css" rel="stylesheet" />
+     
+         <link rel="stylesheet" href="http://static.blog.csdn.net/css/csdn_blog_detail.min.css" />
+
+  
+
+
+    <!-- 请置于所有广告位代码之前 --> 
+            <script src="http://dup.baidustatic.com/js/ds.js"></script>
+
+</head>
+
+
+<body>
+     
+        <div class="tracking-ad" data-view="true" data-mod="ad_popu_72"  data-mtp="62" data-order="40" data-con="ad_content_2072" >
+                     <script id="popuLayer_js_q" src="http://ads.csdn.net/js/popuLayer.js" defer="defer"  type="text/javascript"></script>
+                <div id="layerd" style="position: fixed;bottom:0px;right:0px;line-height:0px;z-index:1000">
+    	                <div class="J_close layer_close" style="display:;background-color:#efefef;padding:0px;color:#333;font:12px/24px Helvetica,Tahoma,Arial,sans-serif;text-align:right;">关闭</div><!-- 广告占位容器 --><div id="cpro_u2895327"></div></div>
+                <script>  document.getElementById("popuLayer_js_q").onload = function () { var styObjd = styObj = { width: "300px", "height": parseInt(250) + 28 }; window.CSDN.Layer.PopuLayer("#layerd", { storageName: "layerd", styleObj: styObjd, total: 50, expoire: 1000 * 60 }); }</script><!-- 投放代码 --><script type="text/javascript">                    /*服务器频道首页置顶Banner960*90，创建于2014-7-3*/    (window.cproArray = window.cproArray || []).push({ id: "u2895327" });  </script>  <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+     
+        </div>
+
+    <!-- 广告位开始 -->
+        
+    <!-- 广告位结束 -->
+
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://c.csdnimg.cn/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/agul_">Present</a></h2>
+            <h3>过去是历史，将来是未知，今日最重要，是上帝的礼物，所以是present</h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        
+     
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>           
+                <li id="btnContents"><a href="http://blog.csdn.net/agul_?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/agul_?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/agul_/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>                
+            
+
+            </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "Agul_";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/agul_";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";  
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+                        <div class="ad_class">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/75257273">
+<font color=red><strong>程序员，为什么写不好一份简历？</strong></font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/74550215">
+<font color=blue><strong>征文 | 你会为 AI 转型么？</strong></font></a>
+&nbsp;&nbsp;&nbsp;&nbsp
+
+
+<a href="http://blog.csdn.net/soledadzz/article/details/75312484">
+<font color=red><strong>福利 | 免费参加 2017 OpenStack Days China</strong></font></a>
+
+
+</div>                        </div>
+
+                        
+
+
+
+  
+
+
+
+
+
+
+<script   type="text/javascript" src="http://static.blog.csdn.net/scripts/category.js"></script>
+
+  <script type="text/ecmascript">
+      window.quickReplyflag = true;
+      var isBole = false; 
+      var fasrc="http://my.csdn.net/my/favorite/miniadd?t=%e5%b8%b8%e6%95%b0%e5%8f%98%e6%98%93%e6%b3%95%e7%9a%84%e5%8e%9f%e7%90%86%e8%a7%a3%e9%87%8a&u=http://blog.csdn.net/agul_/article/details/8561077"
+    </script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Repost"></span>
+
+    <h1>
+        <span class="link_title"><a href="/agul_/article/details/8561077">
+        常数变易法的原理解释        
+           
+        </a>
+        </span>
+
+         
+    </h1>
+</div>
+
+   
+
+        <div class="article_manage clearfix">
+        <div class="article_r">
+            <span class="link_postdate">2013-01-31 13:25</span>
+            <span class="link_view" title="阅读次数">13069人阅读</span>
+            <span class="link_comments" title="评论次数"> <a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(2)</span>
+            <span class="link_collect tracking-ad" data-mod="popu_171"> <a href="javascript:void(0);" onclick="javascript:collectArticle('%e5%b8%b8%e6%95%b0%e5%8f%98%e6%98%93%e6%b3%95%e7%9a%84%e5%8e%9f%e7%90%86%e8%a7%a3%e9%87%8a','8561077');return false;" title="收藏">收藏</a></span>
+             <span class="link_report"> <a href="#report" onclick="javascript:report(8561077,2);return false;" title="举报">举报</a></span>
+
+        </div>
+    </div>    <style type="text/css">        
+            .embody{
+                padding:10px 10px 10px;
+                margin:0 -20px;
+                border-bottom:solid 1px #ededed;                
+            }
+            .embody_b{
+                margin:0 ;
+                padding:10px 0;
+            }
+            .embody .embody_t,.embody .embody_c{
+                display: inline-block;
+                margin-right:10px;
+            }
+            .embody_t{
+                font-size: 12px;
+                color:#999;
+            }
+            .embody_c{
+                font-size: 12px;
+            }
+            .embody_c img,.embody_c em{
+                display: inline-block;
+                vertical-align: middle;               
+            }
+             .embody_c img{               
+                width:30px;
+                height:30px;
+            }
+            .embody_c em{
+                margin: 0 20px 0 10px;
+                color:#333;
+                font-style: normal;
+            }
+    </style>
+    <script  type="text/javascript">
+        $(function () {
+            try
+            {
+                var lib = eval("("+$("#lib").attr("value")+")");
+                var html = "";
+                if (lib.err == 0) {
+                    $.each(lib.data, function (i) {
+                        var obj = lib.data[i];
+                        //html += '<img src="' + obj.logo + '"/>' + obj.name + "&nbsp;&nbsp;";
+                        html += ' <a href="' + obj.url + '" target="_blank">';
+                        html += ' <img src="' + obj.logo + '">';
+                        html += ' <em><b>' + obj.name + '</b></em>';
+                        html += ' </a>';
+                    });
+                    if (html != "") {
+                        setTimeout(function () {
+                            $("#lib").html(html);                      
+                            $("#embody").show();
+                        }, 100);
+                    }
+                }      
+            } catch (err)
+            { }
+            
+        });
+    </script>
+      <div class="category clearfix">
+        <div class="category_l">
+           <img src="http://static.blog.csdn.net/images/category_icon.jpg">
+            <span>分类：</span>
+        </div>
+        <div class="category_r">
+                    <label>
+                        <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">数学<em></em></span>                       
+                    </label>      
+        </div>
+    </div>
+
+  
+
+  
+  
+     
+
+
+<div id="article_content" class="article_content tracking-ad" data-mod=popu_307  data-dsm = "post" >
+
+<p>高数看到常数变易法，不懂为什么要把C变成u，看了篇文章，感觉懂了 转载自<a href="http://www.cnblogs.com/lookof/archive/2009/01/06/1370065.html">http://www.cnblogs.com/lookof/archive/2009/01/06/1370065.html</a></p>
+<p></p>
+<p><em><span style="color:red">注： 本方法是对</span><span style="color:red">崔士襄</span><span style="color:red">教授写的《</span><span style="color:red">“</span><span style="color:red">常数变易法</span><span style="color:red">”</span><span style="color:red">来历的探讨》论文的解释。思路并非本人原创。特此注明。背景详见本人前一篇博文。</span></em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 我们来看下面的式子：</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y’＋P(x)·y&nbsp;＝&nbsp;Q(x)…….(1)</p>
+<p>对于这个式子最正常的思路就是“分离变量”（因为之前所学的思想无一不是把变量分离再两边积分）。所以我们的思维就集中在如何将（1）式的x和y分离上来。</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;&nbsp;起初的一些尝试和启示</strong></p>
+<p>先直接分离看一下：</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dy/dx＋P(x)·y&nbsp;＝&nbsp;Q(x)&nbsp;&nbsp;</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;＝&gt; dy&nbsp;＝&nbsp;( Q(x)－P(x)·y )·dx…….(2)</p>
+<p>&nbsp;</p>
+<p>从中看出y不可能单独除到左边来，所以是分不了的。这时想想以前解决“齐次方程”时用过的招数：设y/x&nbsp;＝&nbsp;u&nbsp;&nbsp;＝&nbsp;&gt; y&nbsp;＝&nbsp;u·x .&nbsp;将y&nbsp;＝&nbsp;u·x代入(1)式:&nbsp;</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; u’·x＋u＋P(x)·u·x&nbsp;＝&nbsp;Q(x)</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ＝&gt; u’·x＋u·(1＋P(x)·x)&nbsp;＝&nbsp;Q(x)</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ＝&gt; du/dx·x&nbsp;＝&nbsp;Q(x)－u(1＋P(x)·x)</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ＝&gt; du&nbsp;＝&nbsp;[Q(x)－u·(1＋P(x)·x)]·(1/x)·dx………(3)</p>
+<p>&nbsp;</p>
+<p>这时u又不能单独除到左边来，所以还是宣告失败。不过，这里还是给了我们一点启示：如果某一项的变量分离不出来，那使该项成为零是比较好的选择。因为这样“变量分离不出”这个矛盾就消失了——整个一项都消失了，还需要分什么呢。比如说，对于（3）式，如果x＝－1/P(x)，那么那一项就消失了；再比如说，对于（2）式，如果P(x)＝0，那么那一项也消失了。当然这些假设都是不可能的，因为x和P(x)等于几是你无法干预的。<strong>不过我们可以这么想：如果我们巧妙地构造出一个函数，使这一项等于零</strong>，那不就万事大吉了。Ok，好戏开场了。</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;&nbsp;进一步：变量代换法</strong></p>
+<p>筒子们可能觉得要构造这么一个函数会很难。但结果会让你跌破&#30524;镜。y＝u·v就是这么符合要求的一个函数。其中u和v都是关于x的函数。这样求y对应于x的函数关系就转变成分别求u对应于x的函数关系和v对应于x的函数关系的问题。你可能觉得把一个函数关系问题变成两个函数关系问题，这简直是脑残的表现——非也，u和v都非常有用，看到下面就知道了。</p>
+<p>让我们看看讲代换y＝u·v代入（1）式会出现什么：</p>
+<p align="center">&nbsp;&nbsp; u’·v＋u·(v’＋P(x)&nbsp;·v)&nbsp;＝&nbsp;Q(x) ………(4)</p>
+<p align="center">&nbsp;</p>
+<p>如果现在利用分离变量法来求u对应于x的函数关系，那么u·(v’＋P(x)&nbsp;·v)就是我们刚刚遇到的没法把u单独分离出来的那一项，既然分不出来，那么干脆把这一项变为零好了。怎么变？这是v的用处就有了。令v’＋P(x)&nbsp;·v＝0，解出v对应x的函数关系，这本身就是一个可以分离变量的微分方程问题，可以将其解出来。</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;dv/dx＋P(x)&nbsp;·v&nbsp;＝&nbsp;0&nbsp;</p>
+<p><strong>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ＝</strong>&gt;&nbsp;v&nbsp;＝&nbsp;C1·e^(-∫P(x)dx)&nbsp;………(5)</p>
+<p>&nbsp;</p>
+<p>现在v解出来了，接下来该处理u了，实际上当v解出来后u就十分好处理了。把（5）式代入（4）式，则u·(v’＋P(x)·v)这一项便被消掉了。剩下的是</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;u’&nbsp;·C1·e^(-∫P(x)dx)&nbsp;＝&nbsp;Q(x)</p>
+<p>而这也是一个可以分离变量的微分方程。同样可以十分容易地解出来：</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; du/dx&nbsp;·C1·e^(-∫P(x)dx)＝Q(x)</p>
+<p><strong>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ＝</strong>&gt; du&nbsp;＝&nbsp;1/C1·e^(∫P(x)dx)·Q(x)·dx</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<strong>＝</strong>&gt; u&nbsp;＝&nbsp;1/C1·∫e^(∫P(x)dx)·Q(x)·dx＋C2………(6)</p>
+<p>&nbsp;</p>
+<p>现在u和v都已求出，那么y＝u·v也迎刃而解：&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; y &nbsp;<strong>＝</strong>&nbsp;u·v</p>
+<p><strong>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;＝</strong>&nbsp;[1/C1·∫e^(∫P(x)dx)·Q(x)·dx＋C2]·[C1·e^(-∫P(x)dx)]</p>
+<p><strong>&nbsp;＝</strong>&nbsp;[∫e^(∫P(x)dx)·Q(x)·dx＋C ]·e^(-∫P(x)dx)&nbsp;………(7)&nbsp;&nbsp;(这里C&nbsp;＝&nbsp;C1·C2)</p>
+<p>&nbsp;</p>
+<p>这个方法看上去增加了复杂度，实际上却把一个不能直接分离变量的微分方程化成了两个可以直接分离变量的微分方程。这个方法不是没有名字的，它叫“变量代换法”（挺大众的一名字），即用u·v代换了y。这时在你脑中不得不油然生出这么一种感觉：想了十一年想出来的法子，还真不是盖的。</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;&nbsp;再进一步：常数变易法</strong></p>
+<p>再进一步观察我们可以看出，求v的微分方程（即v’＋P(x)·v＝0）其实就是求</p>
+<p>y’＋P(x)·y＝Q(x)当Q(x)＝0时的齐次方程。所以，我们可以直接先把非齐次方程当作齐次方程来解。即解出y’＋P(x)·y&nbsp;＝0&nbsp;的解来。&nbsp;得：</p>
+<p align="center">y&nbsp;＝&nbsp;C·e^(-∫P(x)dx)&nbsp;………(8)</p>
+<p>&nbsp;</p>
+<p>注意这里的C·e^(-∫P(x)dx)并非最终答案，从上一环节我们知道这其实是v而已。而最终答案是u·v&nbsp;，v仅是其中一部分。因此这里的C·e^(-∫P(x)dx)并不是我们要的y，因此还要继续。</p>
+<p>&nbsp;</p>
+<p>把（8）式和上面提到的（7）式比较一下：</p>
+<p align="center">y&nbsp;＝&nbsp;u·e^(-∫P(x)dx)&nbsp;………(7)</p>
+<p align="center">y&nbsp;＝&nbsp;C·e^(-∫P(x)dx)&nbsp;………(8)</p>
+<p>&nbsp;</p>
+<p><strong>（7）式是最终的结论，（8）式是目前我们可以到达的地方。那我们偷下懒好了：把（8）式的那个C换成u，再把这个u解出来，不就ok了么。所谓的“常数变易法”就是这么来的，即把常数C硬生生地变成了u</strong>。接下来的事情就简单多了，和前面是一个思路，把代换y＝u·e^(-∫P(x)dx)代入（1）式，由于e^(-∫P(x)dx)是一个可以令那个分离不出变量的项被消掉的特解，因此即可知一定会解得u’·e^(-∫P(x)dx)＝Q(x)。从中解出u，再带回y＝u·e^(-∫P(x)dx)便可得到最终答案。</p>
+<p>&nbsp;</p>
+<p>个人觉得这个方法在思路上并无多大突破，只是利用“变量代换法”现成的结论倒推回去，“抄了一条近路”，但这么一抄不要紧，不解释清楚的话还真不知道这条路到底从哪冒出来的。所以就会引起我们“较劲”的冲动：为什么非齐次要当齐次来解，道理何在？为什么C就可以换成u，道理何在？……&nbsp;这么想想的话教科书（同济5版）也真TM不厚道，你不解释清楚就算了，好歹说两句交代背景的话啊。</p>
+<p><br>
+</p>
+<p>&nbsp;</p>
+<p><strong>Ps</strong>：1.常数变易法在这里并没有显出比变量代换法更好的优势（因为就是一个思路的正逆推导而已），但在解决高阶线性微分方程时就会方便得多。因此倒不能说常数变易法是鸡肋（我开始的想法就是这样的）。</p>
+<p>2.教科书上最后把方程的解拆成了一个齐次方程的通解和一个非齐次方程的特解之和，我看来简直有点脑残的表现，再往后看才知道，原来在解决高阶非齐次线性方程是要用到这个结构的，怪不得。</p>
+<p>3.因此关于中国的教科书以及中国的正统教育我突然有个结论（一排脑瓜子即灵光一现那种）：中国的大多数学生之所以不喜欢学数学是因为觉得难，其实倒不是数学本身难，而是教科书缺少必要的说明逻辑。真正难的不是知识，而是读懂这些教育家企图教给我们的“知识”。</p>
+<br>
+   
+</div>
+
+
+
+
+<!-- Baidu Button BEGIN -->
+
+
+
+
+<div class="bdsharebuttonbox tracking-ad" style="float: right;" data-mod="popu_172">
+<a href="#" class="bds_more" data-cmd="more" style="background-position:0 0 !important; background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=d754dcc0.png) !important"></a>
+<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"  style="background-position:0 -52px !important"></a>
+<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"style="background-position:0 -104px !important"></a>
+<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"style="background-position:0 -260px !important"></a>
+<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"style="background-position:0 -208px !important"></a>
+<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"style="background-position:0 -1612px !important" ></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<!-- Baidu Button END -->
+
+   
+
+<!--172.16.140.15-->
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+
+
+ 
+
+
+        <div id="digg" ArticleId="8561077" >
+            <dl id="btnDigg" class="digg digg_disable"  onclick="btndigga();">
+               
+                 <dt>顶</dt>
+                <dd>1</dd>
+            </dl>
+           
+              
+            <dl id="btnBury" class="digg digg_disable"  onclick="btnburya();">
+              
+                  <dt>踩</dt>
+                <dd>0</dd>               
+            </dl>
+            
+        </div>
+     <div class="tracking-ad" data-mod="popu_222"><a href="javascript:void(0);" >&nbsp;</a>   </div>
+    <div class="tracking-ad" data-mod="popu_223"> <a href="javascript:void(0);" >&nbsp;</a></div>
+    <script type="text/javascript">
+                function btndigga() {
+                    $(".tracking-ad[data-mod='popu_222'] a").click();
+                }
+                function btnburya() {
+                    $(".tracking-ad[data-mod='popu_223'] a").click();
+                }
+            </script>
+
+   <ul class="article_next_prev">
+                <li class="prev_article"><span  onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian']);location.href='http://blog.csdn.net/Agul_/article/details/8005742';">上一篇</span><a href="http://blog.csdn.net/Agul_/article/details/8005742" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">使用VC++过程中总结的经验~</a></li>
+                <li class="next_article"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian']);location.href='http://blog.csdn.net/Agul_/article/details/8634619';">下一篇</span><a href="http://blog.csdn.net/Agul_/article/details/8634619" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">线性表的顺序存储</a></li>
+    </ul>
+
+    <div style="clear:both; height:10px;"></div>
+
+
+            <div class="similar_article"   >
+                    <h4></h4>
+                    <div class="similar_c"style="margin:20px 0px 0px 0px">
+                        <div class="similar_c_t">
+                          &nbsp;&nbsp;相关文章推荐
+                        </div>
+                   
+                        <div class="similar_wrap tracking-ad" data-mod="popu_36" >                       
+                            <ul class="similar_list fl">    
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/llc_9012/article/details/9018243" title="常数变易法的原理" strategy="BlogCommendFromCsdn" target="_blank">常数变易法的原理</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://chengjianxiaoxue.iteye.com/blog/2084029" title="编程算法基础_常用思路_3_常数变易法" strategy="BlogCommendFromCsdn" target="_blank">编程算法基础_常用思路_3_常数变易法</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/u012480599/article/details/49125155" title="编译原理之常数处理机(二)" strategy="BlogCommendFromCsdn" target="_blank">编译原理之常数处理机(二)</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://xwk.iteye.com/blog/2136864" title="袖珍电子书：关于数学常数0、1、π、e与i" strategy="BlogCommendFromCsdn" target="_blank">袖珍电子书：关于数学常数0、1、π、e与i</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://shangxun.iteye.com/blog/1940672" title="opencv  矩阵与一个常数相乘的 两种实现方法" strategy="BlogCommendFromCsdn" target="_blank">opencv  矩阵与一个常数相乘的 两种实现方法</a>
+                                   </li>
+                            </ul>
+                              <ul class="similar_list fr">      
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/u011471286/article/details/30281365" title="常数易变法解释" strategy="BlogCommendFromCsdn" target="_blank">常数易变法解释</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://rys1314520.iteye.com/blog/1820887" title="使用opencv的cvConvertScale让矩阵除以一个常数 结果总为0的 调试心得" strategy="BlogCommendFromCsdn" target="_blank">使用opencv的cvConvertScale让矩阵除以一个常数 结果总为0的 调试心得</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/wxwd1/article/details/27976543" title="常数变易法学习笔记" strategy="BlogCommendFromCsdn" target="_blank">常数变易法学习笔记</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/wojiaopanpan/article/details/7277018" title="《Ruby Programming》向Ruby之父学程序设计 开始使用Ruby 对象与变量、常数" strategy="BlogCommendFromCsdn" target="_blank">《Ruby Programming》向Ruby之父学程序设计 开始使用Ruby 对象与变量、常数</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/baiwujushi/article/details/5666856" title="方舟の女：再论黑洞宇宙霍金熵，信息论，测不准原理和普朗克常数" strategy="BlogCommendFromCsdn" target="_blank">方舟の女：再论黑洞宇宙霍金熵，信息论，测不准原理和普朗克常数</a>
+                                   </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+      
+</div>
+
+     <div>
+           
+
+       
+                           
+            <!-- 广告位：PC端-博客内容页-banner1-960*90 --> 
+            <script> 
+                (function() { 
+                    var s = "_" + Math.random().toString(36).slice(2); 
+                    document.write('<div id="' + s + '"></div>'); 
+                    (window.slotbydup=window.slotbydup || []).push({ 
+                        id: '4228013', 
+                        container: s, 
+                        size: '0,0', 
+                        display: 'inlay-fix' 
+                    }); 
+                })(); 
+            </script>
+    </div>
+
+<div id="suggest"></div>
+         <script  language="javascript" type='text/javascript'>     
+             $(function(){
+                 $.get("/Agul_/svc/GetSuggestContent/8561077",function(data){
+                     $("#suggest").html(data);
+                 });     
+             });             
+         </script>  
+
+        <dl class="blog-ass-articl tracking-ad" id="res-relatived" data-mod="popu_84"  > 
+             <dt><span>猜你在找</span></dt>    
+           
+    
+           
+
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/30" title="C语言及程序设计（讲师：贺利坚）" strategy="undefined" target="_blank">C语言及程序设计（讲师：贺利坚）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/379" title="Python爬虫工程师培养课程全套（讲师:韦玮）" strategy="undefined" target="_blank">Python爬虫工程师培养课程全套（讲师:韦玮）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/468" title="Python全栈开发入门与实战课（讲师：李杰）" strategy="undefined" target="_blank">Python全栈开发入门与实战课（讲师：李杰）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/233" title="2017软考网络规划设计师视频套餐（讲师：任铄）" strategy="undefined" target="_blank">2017软考网络规划设计师视频套餐（讲师：任铄）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/169" title="2017软考软件设计师视频套餐（讲师：任铄）" strategy="undefined" target="_blank">2017软考软件设计师视频套餐（讲师：任铄）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/144" title="2017软考-信息系统项目管理师视频套餐（讲师：任铄）" strategy="undefined" target="_blank">2017软考-信息系统项目管理师视频套餐（讲师：任铄）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/58" title="软考(高级)项目经理实战营（讲师：张传波）" strategy="undefined" target="_blank">软考(高级)项目经理实战营（讲师：张传波）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/58" title="微信公众平台开发套餐（讲师：刘运强）" strategy="undefined" target="_blank">微信公众平台开发套餐（讲师：刘运强）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/422" title="深度学习原理+实战+算法+主流框架套餐（讲师：唐宇迪）" strategy="undefined" target="_blank">深度学习原理+实战+算法+主流框架套餐（讲师：唐宇迪）</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/471" title="2017系统集成项目管理工程师通关套餐（讲师：徐朋）" strategy="undefined" target="_blank">2017系统集成项目管理工程师通关套餐（讲师：徐朋）</a>
+                        </dd>
+        </dl>
+
+
+
+
+            
+                                    
+            
+                                    
+
+        <!-- 广告位开始 -->
+        <!-- 广告位结束 -->
+
+
+<div class="comment_class">
+    <div id="comment_title" class="panel_head">
+        <span class="see_comment">查看评论</span><a name="comments"></a></div>
+    <div id="comment_list">
+    </div>
+    <div id="comment_bar">
+    </div>
+    <div id="comment_form">
+    </div>
+    <div class="announce">
+        * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+</div>
+
+<script type="text/javascript">
+    var fileName = '8561077';
+    var commentscount = 2;
+    var islock = false
+</script>
+
+    <div id="ad_bot">
+    </div>
+<div id="report_dialog">
+</div>
+
+<div id="d-top"  style="bottom:60px;">
+
+        <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="http://static.blog.csdn.net/images/blog-icon-reply.png" alt="快速回复">
+        </a>    
+    <a id="d-top-a" class="btn btn-top backtop"  style="display: none;" title="返回顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])" style="">         
+         <img src="http://static.blog.csdn.net/images/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#ad_frm_0").height("90px");
+        
+        setTimeout(function(){
+            $("#ad_frm_2").height("200px");
+        },1000);    
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+
+
+
+
+
+<div id="pop_win" style="display:none ;position: absolute; z-index: 10000; border: 1px solid rgb(220, 220, 220); top: 222.5px; left: 630px; opacity: 1; background: none 0px 0px repeat scroll rgb(255, 255, 255);">
+    
+</div>
+<div id="popup_mask"></div>
+<style>
+    #popup_mask
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+        left: 0px;
+        top: 0px;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+        display: none;
+    }
+
+</style>
+
+
+
+
+<script type="text/javascript">
+    $(function(){        
+        
+        setTimeout(function(){
+            $(".comment_body:contains('回复')").each(function(index,item){
+                var u=$(this).text().split('：')[0].toString().replace("回复","")
+                var thisComment=$(this);
+                if(u)
+                {
+                    $.getJSON("https://passport.csdn.net/get/nick?callback=?", {users: u}, function(a) {
+                        if(a!=null&&a.data!=null&&a.data.length>0)
+                        {
+                            nick=a.data[0].n; 
+                            if(u!=nick)
+                            {
+                                thisComment.text(thisComment.text().replace(u,nick));  
+                            }
+                        }       
+                    });  
+                }
+            });         
+
+        },200);  
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },5000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },10000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },15000);
+        
+        setTimeout(function(){
+            $("a img[src='http://js.tongji.linezing.com/stats.gif']").parent().css({"position":"absolute","left":"50%"});
+        },300);
+    });
+
+    function loginbox(){
+        var $logpop=$("#pop_win");
+        $logpop.html('<iframe src="https://passport.csdn.net/account/loginbox?service=http://static.blog.csdn.net/callback.htm" frameborder="0" height="600" width="400" scrolling="no"></iframe>');
+
+        $('#popup_mask').css({
+            opacity: 0.5,
+            width: $( document ).width() + 'px',
+            height:  $( document ).height() + 'px'
+        });
+        $('#popup_mask').css("display","block");
+ 
+        $logpop.css( {
+            top: ($( window ).height() - $logpop.height())/ 2  + $( window 
+       ).scrollTop() + 'px',
+            left:($( window ).width() - $logpop.width())/ 2
+        } );
+ 
+        setTimeout( function () {
+            $logpop.show();
+            $logpop.css( {
+                opacity: 1
+            } );
+        }, 200 );
+ 
+        $('#popup_mask').unbind("click");
+        $('#popup_mask').bind("click", function(){
+            $('#popup_mask').hide();
+            var $clopop = $("#pop_win");
+            $("#common_ask_div_sc").css("display","none");
+            $clopop.css( {
+                opacity: 0
+            } );
+            setTimeout( function () {
+                $clopop.hide();
+            }, 350 );
+            return false;
+        });
+    }   
+
+    var articletitle='常数变易法的原理解释';
+
+</script>
+
+
+
+
+
+
+
+
+
+
+                        <div class="clear">
+                        </div>
+                    </div>                   
+                
+            </div>
+                   
+           <div id="side">
+               
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/Agul_" target="_blank">
+    <img src="http://avatar.csdn.net/6/6/B/1_agul_.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/Agul_" class="user_name" target="_blank">Agul_</a></span>
+</div>
+<div class="interact">
+
+    <a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+
+ <a href="javascript:void(0);" class="letter"  title="[发私信]" onclick="window.open('http://msg.csdn.net/letters/model?receiver=Agul_','_blank','height=350,width=700');_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>  
+</div>
+<div id="blog_medal">
+                <div id="bms_box">
+                                            <a  target="_blank">
+                                                    <img src="http://c.csdnimg.cn/jifen/images/xunzhang/xunzhang/zhuanlandaren.png" onmouseover="m_over_m(this,2)" onmouseout="m_out_m()" alt="1" >
+                                            </a>
+               </div>
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>214048次</span></li>
+    <li>积分：<span>2530</span> </li>    
+    <li >等级： <span style="position:relative;display:inline-block;z-index:1" >
+            <img src="http://c.csdnimg.cn/jifen/images/xunzhang/jianzhang/blog5.png" alt="" style="vertical-align: middle;" id="leveImg">
+            <div id="smallTittle" style=" position: absolute;  left: -24px;  top: 25px;  text-align: center;  width: 101px;  height: 32px;  background-color: #fff;  line-height: 32px;  border: 2px #DDDDDD solid;  box-shadow: 0px 2px 2px rgba (0,0,0,0.1);  display: none;   z-index: 999;">
+            <div style="left: 42%;  top: -8px;  position: absolute;  width: 0;  height: 0;  border-left: 10px solid transparent;  border-right: 10px solid transparent;  border-bottom: 8px solid #EAEAEA;"></div>
+            积分：2530 </div>
+        </span>  </li>
+    <li>排名：<span>第14047名</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>57篇</span></li>
+    <li>转载：<span>4篇</span></li>
+    <li>译文：<span>1篇</span></li>
+    <li>评论：<span>23条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body" class="form_search">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search csdn-tracking-statistics" target="_blank"  data-mod="popu_306">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="button" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div>
+
+<script type="text/javascript">
+
+   
+    $(function () {
+        $("#btnSubmit").unbind("click");
+        $("#btnSubmit").click(function () {           
+            search();
+        });
+
+        $("#frmSearch").submit(function () {           
+            search();
+            return false;
+        });
+
+        function search()
+        {
+            if ($("#inputSearch").val() == "") {               
+                alert("请录入搜索关键词！");                         
+                return false;
+            }
+            //var url = "http://so.csdn.net/so/search/s.do?q=" + encodeURIComponent($("#inputSearch").val()) + "&u=" + username + "&t=blog";           
+            var url = "https://www.baidu.com/s?wd=" + encodeURIComponent($("#inputSearch").val()) + "%20site%3Ablog.csdn.net"
+            window.location.href = url;
+        }   
+    });
+</script><div id="panel_Category" class="panel">
+    <ul class="panel_head"><span>博客专栏</span></ul>
+    <ul class="panel_body" id="sp_column">
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/gitnote.html" target="_blank"><img src="http://img.blog.csdn.net/20151123175416052" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/gitnote.html" target="_blank">git学习笔记</a>
+    <p>文章：13篇</p>
+    <span>阅读：123981</span>
+    </td>
+    </tr></table>
+    </ul>
+</div><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">    
+                 <li>
+                    <a href="/Agul_/article/category/1095856" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">学习总结</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1093585" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">技巧总结</a><span>(4)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1093388" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">个人日记</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1097244" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">解决方案</a><span>(12)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1205224" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Git学习笔记</a><span>(13)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1356777" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">数据结构代码</a><span>(7)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1356782" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">数学</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1363542" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">其他</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1411095" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">操作系统实现</a><span>(9)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/1429646" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">多线程学习</a><span>(7)</span>
+                </li>
+                 <li>
+                    <a href="/Agul_/article/category/2167637" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">译文</a><span>(1)</span>
+                </li>
+</ul>
+</div><div id="panel_Archive" class="panel">
+<ul class="panel_head"><span>文章存档</span></ul>
+<ul class="panel_body">
+<div id="archive_list">
+<!--归档统计-->
+<li><a href="/Agul_/article/month/2016/03">2016年03月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2015/11">2015年11月</a><span>(2)</span></li><li><a href="/Agul_/article/month/2015/09">2015年09月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2014/08">2014年08月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2014/04">2014年04月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2014/01">2014年01月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2013/11">2013年11月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2013/07">2013年07月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2013/06">2013年06月</a><span>(3)</span></li><li><a href="/Agul_/article/month/2013/05">2013年05月</a><span>(15)</span></li><li><a href="/Agul_/article/month/2013/04">2013年04月</a><span>(2)</span></li><li><a href="/Agul_/article/month/2013/03">2013年03月</a><span>(8)</span></li><li><a href="/Agul_/article/month/2013/01">2013年01月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2012/12">2012年12月</a><span>(5)</span></li><li><a href="/Agul_/article/month/2012/10">2012年10月</a><span>(2)</span></li><li><a href="/Agul_/article/month/2012/09">2012年09月</a><span>(1)</span></li><li><a href="/Agul_/article/month/2012/08">2012年08月</a><span>(14)</span></li><li><a href="/Agul_/article/month/2012/03">2012年03月</a><span>(3)</span></li>
+</div>
+</ul>
+</div>
+<div id="hotarticls" class="panel tracking-ad" data-mod="popu_340">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="/agul_/article/details/7835786" title="Git学习笔记（三） Git暂存区">Git学习笔记（三） Git暂存区</a><span>(24232)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7843678" title="Git学习笔记（十一） Git克隆">Git学习笔记（十一） Git克隆</a><span>(22612)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7838960" title="Git学习笔记（六） Git检出">Git学习笔记（六） Git检出</a><span>(15725)</span>
+</li>
+<li>
+<a href="/agul_/article/details/8561077" title="常数变易法的原理解释">常数变易法的原理解释</a><span>(13067)</span>
+</li>
+<li>
+<a href="/agul_/article/details/8088295" title="关于boost中shared_ptr使用方法的一些例子">关于boost中shared_ptr使用方法的一些例子</a><span>(12285)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7839781" title="Git学习笔记（八） Git基本操作">Git学习笔记（八） Git基本操作</a><span>(9567)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7842885" title="Git学习笔记（九） 历史穿梭">Git学习笔记（九） 历史穿梭</a><span>(8644)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7835237" title="Git学习笔记（二） Git初始化">Git学习笔记（二） Git初始化</a><span>(8097)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7838599" title="Git学习笔记（五） Git重置">Git学习笔记（五） Git重置</a><span>(7537)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7851373" title="简陋的Git教程（也算是学习Git的个人总结吧）">简陋的Git教程（也算是学习Git的个人总结吧）</a><span>(7471)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel tracking-ad" data-mod="popu_341">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/agul_/article/details/8886560" title="《一个操作系统的实现》（一）：不到20行的操作系统代码的解释">《一个操作系统的实现》（一）：不到20行的操作系统代码的解释</a><span>(4)</span>
+</li>
+<li>
+<a href="/agul_/article/details/8725251" title="外企求职讲座听后小记">外企求职讲座听后小记</a><span>(4)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7851373" title="简陋的Git教程（也算是学习Git的个人总结吧）">简陋的Git教程（也算是学习Git的个人总结吧）</a><span>(3)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7835786" title="Git学习笔记（三） Git暂存区">Git学习笔记（三） Git暂存区</a><span>(3)</span>
+</li>
+<li>
+<a href="/agul_/article/details/9004457" title="多线程（五）：线程多次汇合控制">多线程（五）：线程多次汇合控制</a><span>(2)</span>
+</li>
+<li>
+<a href="/agul_/article/details/9233749" title="【学术报告】云山物罩 大话‘大数据’">【学术报告】云山物罩 大话‘大数据’</a><span>(2)</span>
+</li>
+<li>
+<a href="/agul_/article/details/8561077" title="常数变易法的原理解释">常数变易法的原理解释</a><span>(2)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7843678" title="Git学习笔记（十一） Git克隆">Git学习笔记（十一） Git克隆</a><span>(1)</span>
+</li>
+<li>
+<a href="/agul_/article/details/8884792" title="《一个操作系统的实现》（零）：搭建环境">《一个操作系统的实现》（零）：搭建环境</a><span>(1)</span>
+</li>
+<li>
+<a href="/agul_/article/details/7844667" title="Git学习笔记（十二） 前几章的补充">Git学习笔记（十二） 前几章的补充</a><span>(1)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend">
+<ul>
+<li><a href="http://blog.csdn.net/blogdevteam/article/details/75116901" target="_blank">* CSDN日报20170714——《从创业到再就业，浅述对程序员职业生涯的看法》</a></li>
+<li><a href="http://blog.csdn.net/jiangwei0910410003/article/details/74886918" 
+target="_blank">* Android 逆向 | 锁屏密码算法解析以及破解方案</a></li>
+<li><a href="http://blog.csdn.net/hopeztm/article/details/75201823"target="_blank">* 从单一WAR到多活，记述一个创业公司的架构演变</a></li>
+<li><a href="http://blog.csdn.net/sileixinhua/article/details/75203725" 
+target="_blank">* 我的AI转型之路与AI之我见（非985211的奋斗路程与视角）</a></li>
+<li><a href="http://blog.csdn.net/u013709270/article/details/74892124" 
+target="_blank">* AI大行其道，你准备好了吗？—谨送给徘徊于转行AI的程序员</a></li>
+<li><a href="http://blog.csdn.net/chancein007/article/details/74943322" 
+target="_blank">* AI转型中的思考和洞见</a></li>
+
+</ul></ul>
+</div>
+
+
+<div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="/agul_/article/details/7835786#comments">Git学习笔记（三） Git暂存区</a>
+    <p style="margin:0px;"><a href="/z15732621582" class="user_name">z15732621582</a>:
+重置git reset HEAD 加上^话，工作会改变吗？
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/7843678#comments">Git学习笔记（十一） Git克隆</a>
+    <p style="margin:0px;"><a href="/z15732621582" class="user_name">z15732621582</a>:
+谢谢分享
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/7844667#comments">Git学习笔记（十二） 前几章的补充</a>
+    <p style="margin:0px;"><a href="/z15732621582" class="user_name">z15732621582</a>:
+刚接触没有很深的研究
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/7851373#comments">简陋的Git教程（也算是学习Git的个人总结吧）</a>
+    <p style="margin:0px;"><a href="/z15732621582" class="user_name">z15732621582</a>:
+我是一步步的踏着错误走过了的
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/8561077#comments">常数变易法的原理解释</a>
+    <p style="margin:0px;"><a href="/powerful_mercy" class="user_name">powerful_mercy</a>:
+感谢分享
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/8561077#comments">简陋的Git教程（也算是学习Git的个人总结吧）</a>
+    <p style="margin:0px;"><a href="/chuchus" class="user_name">chuchus</a>:
+发表成功！评论耗时:19813毫秒
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/8561077#comments">简陋的Git教程（也算是学习Git的个人总结吧）</a>
+    <p style="margin:0px;"><a href="/chuchus" class="user_name">chuchus</a>:
+好棒啊 自己一步步试出来的我觉得git不好用
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/9233749#comments">【学术报告】云山物罩 大话‘大数据’</a>
+    <p style="margin:0px;"><a href="/Agul_" class="user_name">Agul_</a>:
+@yjq_java:正解~是软件的学弟...or学长？
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/9233749#comments">【学术报告】云山物罩 大话‘大数据’</a>
+    <p style="margin:0px;"><a href="/yjq_java" class="user_name">yjq_java</a>:
+工大10级软件的吧？博客内容不错赞一个
+    </p>
+    </li>
+    <li>
+   
+         <a href="/agul_/article/details/9233749#comments">Git学习笔记（三） Git暂存区</a>
+    <p style="margin:0px;"><a href="/Agul_" class="user_name">Agul_</a>:
+@zhuqing_739:我不是复制粘贴的呀 是边读纸质书边记到博客里的
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+
+                   <!-- 广告位开始 -->                    <!-- 广告位结束 -->
+                   <div class="tracking-ad" data-view="true"  data-mtp="63" data-order="40" data-con="ad_content_1260" style="width: 200px; height: 500px;">
+                         <div id="nav_show_top_stop" style="width: 200px;height: 500px;z-index:1000"><div id="cpro_u2734128"></div>
+                             <div id="cpro_u3031287"></div></div>
+                   </div>
+    <script type="text/javascript">
+        setTimeout(function () {
+            var naviga_offsetTop = 0;
+            function naviga_stay_top() { var scrollTop = jQuery(document).scrollTop(); if (scrollTop > naviga_offsetTop) { jQuery("#nav_show_top_stop").css({ "position": "fixed" }); jQuery("#nav_show_top_stop").css({ "top": "0px" }); } else { jQuery("#nav_show_top_stop").css({ "position": "fixed" }); jQuery("#nav_show_top_stop").css({ "top": naviga_offsetTop - scrollTop + "px" }); } }
+            function onload_function() { naviga_offsetTop = jQuery("#nav_show_top_stop").position().top; jQuery(window).bind("scroll", naviga_stay_top); jQuery(window).bind("mousewheel", naviga_stay_top); jQuery(document).bind("scroll", naviga_stay_top); jQuery(document).bind("mousewheel", naviga_stay_top); } jQuery(document).ready(onload_function);
+
+        }, 200);
+    </script>
+<script type="text/javascript">(window.cproArray = window.cproArray || []).push({ id: "u2734128" });  </script> 
+                    <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script> 
+                   <script type="text/javascript">
+                       /*PC端-博客内容页左侧Button2-200*200-2017/7/10*/
+                       (window.cproArray = window.cproArray || []).push({ id: "u3031287" });
+</script>
+<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/c.js"></script>
+
+           </div>   
+
+            <div class="clear">
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<span class='tracking-ad' data-mod='popu_167'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a></span>"
+                    + "<span class='tracking-ad' data-mod='popu_170'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a></span>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+
+        $(".bar").show();
+    });
+</script>
+
+
+
+
+
+    </div>
+      <!--new top-->
+    
+
+     
+
+   
+        <!--new top-->
+   
+   
+
+    
+    
+    
+   
+
+   
+
+
+       <script type="text/javascript" src="http://static.blog.csdn.net/public/res/bower-libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+          <script type="text/javascript">
+              //$(function () {
+              //    setTimeout(function () {
+              //        var searchtitletags = articletitle + ',' + $("#tags").html();
+              //        searchService({
+              //            index: 'blog',
+              //            query: searchtitletags,
+              //            from: 5,
+              //            size: 5,
+              //            appendTo: '#res',
+              //            url: 'recommend',
+              //            his: 2,
+              //            client: "blog_cf_enhance",
+              //            tmpl: '<dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="#{ url }" title="#{ title }" strategy="#{ strategy }">#{ title }</a></dd>'
+              //        });
+              //    }, 1000);
+              //});
+
+         </script>
+    
+    <script src="http://static.blog.csdn.net/scripts/csdn_blog_detail.min.js" type="text/javascript"></script>
+        
+    <script type="text/javascript" src="http://c.csdnimg.cn/blog/csdn_public_blog_detail.min.js?20170626001"></script>
+
+    <script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=1265558"></script>
+
+     
+    
+
+
+  <div id="a52b5334d" style="width: 1px; height: 1px; display: none;">
+                    <script id="adJs52b5334"></script>
+                    <script>document.getElementById("adJs52b5334").src = "http://ads.csdn.net/js/opt/52b5334.js?t=" + Math.random();</script>
+   </div>
+
+    
+    
+        
+     
+
+    
+          
+    <div class="pop_CA_cover"  style="display:none"></div>
+    <div class="pop pop_CA"  style="display:none">
+          <div class="CA_header">
+            收藏助手
+            <span class="cancel_icon"  id="fapancle"  onclick="$('.pop_CA').hide();$('.pop_CA_cover').hide();"></span>
+          </div>
+          <iframe src="" id="fa" frameborder="0" width="100%" height="360"  scrolling="no" ></iframe>
+    </div>
+
+
+        <script type="text/javascript">
+
+            $(function () {
+                var fromjs = $("#fromjs");
+                if (fromjs.length > 0) {
+                    $("#fromjs .markdown_views pre").addClass("prettyprint");
+                    prettyPrint();
+
+                    $('pre.prettyprint code').each(function () {
+                        var lines = $(this).text().split('\n').length;
+                        var $numbering = $('<ul/>').addClass('pre-numbering').hide();
+                        $(this).addClass('has-numbering').parent().append($numbering);
+                        for (i = 1; i <= lines; i++) {
+                            $numbering.append($('<li/>').text(i));
+                        };
+                        $numbering.fadeIn(1700);
+                    });
+
+                    $('.pre-numbering li').css("color", "#999");
+                }
+            });
+
+            $(".markdown_views a[target!='_blank']").attr("target", "_blank");
+
+            //$(".toc a[target='_blank']").attr("target", "");
+
+            setTimeout(function () {
+                $(".toc a[target='_blank']").attr("target", "");
+            }, 500);
+
+        </script>
+
+</body>
+</html>   
